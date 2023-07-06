@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Author List</title>
+</head>
+<body>
+<h1>Author List</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <!-- Iterate over the list of authors and display the data -->
+  <tr th:each="author : ${authors}">
+    <td th:text="${author.id}"></td>
+    <td th:text="${author.name}"></td>
+
+  </tr>
+  </tbody>
+</table>
+
+<!-- Add links or buttons for CRUD operations -->
+
+<p>Authors create <a href="/authors/create">here</a></p>
+<p>Authors delete <a href="/authors/delete">here</a></p>
+<p>how do I even get home? <a href="http://localhost:8080/">here</a></p>
+</body>
+</html>

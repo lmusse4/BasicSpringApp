@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Authors</title>
+</head>
+<body>
+<h1>Delete Authors</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <!-- Iterate over the list of authors and display the data -->
+  <tr th:each="author : ${authors}">
+    <td th:text="${author.id}"></td>
+    <td th:text="${author.name}"></td>
+    <td>
+      <form th:action="@{/authors/delete/{id}(id=${author.id})}" method="post">
+        <button type="submit">Delete</button>
+      </form>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+<p>how do I even get home? <a href="http://localhost:8080/">here</a></p>
+</body>
+</html>

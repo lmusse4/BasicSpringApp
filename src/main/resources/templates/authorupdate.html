@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Author</title>
+</head>
+<body>
+<h1>Update Author</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Update</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- Iterate over the list of authors and display the data -->
+  <tr th:each="author : ${authors}">
+    <td th:text="${author.id}"></td>
+    <td th:text="${author.name}"></td>
+    <td>
+      <a th:href="@{/authors/update/{id}(id=${author.id})}">Update</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

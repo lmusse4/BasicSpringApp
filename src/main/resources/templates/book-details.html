@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Details</title>
+</head>
+<body>
+<h1>Book Details</h1>
+<table>
+  <tr>
+    <th>ID:</th>
+    <td th:text="${book.id}"></td>
+  </tr>
+  <tr>
+    <th>Title:</th>
+    <td th:text="${book.title}"></td>
+  </tr>
+  <tr>
+    <th>Author:</th>
+    <td th:text="${book.author.name}"></td>
+  </tr>
+
+</table>
+<!-- Add links or buttons for CRUD operations -->
+</body>
+</html>
